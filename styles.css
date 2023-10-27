@@ -1,2 +1,25 @@
 
 /* Your CSS Code here. */
+/* Apply these styles to the holder class */
+.holder {
+  display: flex; /* Use flex display to create a flex container */
+  justify-content: space-between; /* Distribute space between items */
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+}
+
+/* Apply these styles to the item class */
+.item {
+  flex: 0 1 calc(33.33% - 10px); /* Flex properties to control item width and prevent squashing */
+  margin: 5px; /* Create space between items */
+  max-width: calc(33.33% - 10px); /* Set the maximum width for each item */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+/* Style for the first and last items to touch the ends of the screen */
+.item:first-child {
+  margin-left: 0;
+}
+
+.item:last-child {
+  margin-right: 0;
+}
